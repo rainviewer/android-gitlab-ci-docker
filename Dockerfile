@@ -34,8 +34,3 @@ RUN sdkmanager --sdk_root=${ANDROID_HOME} --update \
 	# && sdkmanager --sdk_root=${ANDROID_HOME} "extras;android;m2repository" \
 	# && sdkmanager --sdk_root=${ANDROID_HOME} "extras;google;m2repository" \
 	&& sdkmanager --sdk_root=${ANDROID_HOME} "extras;google;google_play_services"
-
-# AVD device
-RUN sdkmanager --sdk_root=${ANDROID_HOME} "system-images;android-${ANDROID_COMPILE_SDK};google_apis_playstore;`uname -m`" \
-	&& sdkmanager --update \
-	&& echo no | avdmanager create avd -n test-avd -k "system-images;android-${ANDROID_COMPILE_SDK};google_apis_playstore;`uname -m`"
