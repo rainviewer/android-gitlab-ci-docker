@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:11-jdk
 
 ENV ANDROID_COMPILE_SDK "31"
 ENV ANDROID_BUILD_TOOLS "31.0.0"
